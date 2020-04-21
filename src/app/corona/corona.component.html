@@ -1,0 +1,103 @@
+
+<html>
+  <body >
+    
+    <div class="form-control navbar-brand ">
+      <!-- <h3 >Last updated time {{time_series.statewise[0].lastupdatedtime}}</h3> -->
+
+    </div>
+  <div class="container">
+    <div class="row "  >
+      <div  class="col"><span class="d-block p-2 bg-primary text-white"><strong>Last updated {{time_series.statewise[0].lastupdatedtime}}</strong></span></div>
+    </div>
+    <div class="row "  >
+      <div  class="col total_cell " > <strong>Total </strong><br/><div >{{time_series.statewise[0].confirmed}}</div></div>
+      <div  class="col active_cell " > <strong>Active </strong><br/><div >{{time_series.statewise[0].active}}</div></div>
+      <div  class="col recover_cell " > <strong>Recover  </strong><br/><div >{{time_series.statewise[0].recovered}}</div></div>      
+      <div  class="col death_cell " > <strong>Death </strong><br/><div >{{time_series.statewise[0].deaths}}</div></div>
+    </div>
+  </div>
+  <div class="alert alert-warning alert_box alert-dismissible fade show" role="alert">
+    Click on state for more details...
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+  </div>
+ <table class=" navbar-light bg-light " style="width: 100%;" >
+    <thead>
+        <tr class="table-primary" >
+            
+          <th scope="col" class="state_head">State</th>
+          <th scope="col" class="total_head">Confirm</th>
+          <th scope="col" class="active_head">Active</th>
+          <th scope="col" class="recover_head">Recover</th>
+          <th scope="col" class="death_head">Death</th>
+
+        </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let item of time_series.statewise | slice:1;" > 
+        
+        <tr  id="rows" class="row_all" (click)="isShow(item)"  >
+         
+            <td class="state_row">{{item.state}} {{showDistrictData(item)}}</td>
+            <td class="total_row">{{item.confirmed}} </td>
+            <td class="active_row">{{item.active}} </td>
+            <td class="recover_row">{{item.recovered}} </td>
+            <td class="death_row">{{item.deaths}} </td>       
+            
+        </tr>
+        <tr>
+        <div class="container " style="width:250px;" *ngIf="item.show">
+          <div class="row " >
+            <div class="col"></div>
+            <div class="col-md-5 div_head heading-content state_row" style="width:100px;" scope="col"><b>District</b></div>
+            <div class="col-md-5 div_head heading-content total_row" style="width:100px;" scope="col"><b>Confirmed</b></div>
+          </div>
+          <div class="row" *ngFor="let dis of districtDetail">
+            
+            <div class="col"></div>
+            <div class="col-md-5 div_hover state_row" style="width:100px;">{{dis.name}}</div>
+          
+            <div class="col-md-5 div_hover total_row" style="width:100px;">{{dis.confirmed}}</div>
+          
+          </div>
+        </div>
+      </tr>
+      </ng-container>
+      <tr>
+        
+        <td class="state_row">{{time_series.statewise[0].state}} </td>
+        <td class="total_row">{{time_series.statewise[0].confirmed}} </td>
+        <td class="active_row">{{time_series.statewise[0].active}} </td>
+        <td class="recover_row">{{time_series.statewise[0].recovered}} </td>
+        <td class="death_row">{{time_series.statewise[0].deaths}} </td>
+      </tr>
+    </tbody>
+    
+</table>
+    <div id="container"></div>
+    <div class="chart-display" style="height: 50%">
+      <canvas id="daily"></canvas>
+      
+    </div>
+    <div class="text-center"> 
+      <button class="btn btn-danger btn-sm btn-xs waves-effect"  (click)="setDailyGraph(14)">14 Days</button>
+      <button class="btn btn-warning btn-sm btn-xs waves-effect" (click)="setDailyGraph(30)">30 Days</button>
+      <button class="btn btn-secondary btn-sm btn-xs waves-effect" (click)="setDailyGraph(0)">All Days</button>
+  </div>
+    <br/>
+    <div class="chart-display" >
+      <canvas id="total"></canvas>
+      
+    </div>
+    <div class="text-center">
+      <button class="btn btn-danger btn-sm  waves-effect" (click)="setTotalGraph(14)">14 Days</button>
+      <button class="btn btn-warning btn-sm  waves-effect" (click)="setTotalGraph(30)">30 Days</button>
+      <button class="btn btn-secondary btn-sm  waves-effect" (click)="setTotalGraph(0)">All Days</button>
+    </div>
+    
+    
+
+   
+
+</body>
+</html>

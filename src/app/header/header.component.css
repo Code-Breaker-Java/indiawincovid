@@ -1,0 +1,33 @@
+
+/* Style the body */
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+/* Header/Logo Title */
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 30px;
+}
+
+/* Page Content */
+.content {padding:20px;}
+
+.bs-example{
+  margin: 20px;
+}
+
+h2 {
+  text-decoration: line-through;
+  margin-bottom: -10px;
+  color: red;
+}
+p.ex2{
+  font-size: 13px;
+  color: green;
+  text-decoration: overline;
+}

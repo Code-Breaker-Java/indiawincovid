@@ -1,0 +1,188 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+
+.div_hover {
+    background-color: rgb(226, 228, 220);
+    padding: 0.25rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+.div_head {background-color:rgb(184, 218, 255);
+    padding-top: 5px;
+    padding-bottom: 5px;}
+
+.row_hover {
+    background-color: rgb(24, 185, 37);
+    color: rgb(13, 20, 2);
+}
+
+.total_cell {
+    color: red;
+    text-align: center;
+    font-family: "archia";
+    font-size: 18px!important;
+    /* font-size: auto; */
+    font-weight: 900;
+    width: 25%;
+}
+
+.active_cell {
+    color:blue;
+    text-align: center;
+    font-family: "archia";
+    font-size: 18px!important;
+    /* font-size: auto; */
+    font-weight: 900;
+    width: 25%;
+
+}
+
+.recover_cell {
+    color:green;
+    text-align: center;
+    font-family: "archia";
+    
+    font-size: 18px!important;
+    /* font-size: auto; */
+    font-weight: 900;
+    width: 25%;
+
+}
+.death_cell {
+    color:cornflowerblue;
+    text-align: center;
+    font-family: "archia";
+    font-size: 18px!important;
+    /* font-size: auto; */
+    font-weight: 900;
+    width: 25%;
+
+}
+
+
+.total_row {
+    color: red;
+    text-align: center;
+    font-family: "archia";
+    font-size: 18px!important;
+    font-weight: 600;
+    width: 20%;
+}
+
+.active_row {
+    color: blue;
+    text-align: center;
+    font-family: "archia";
+    font-size: 18px!important;
+    font-weight: 600;
+    width: 20%;
+}
+.recover_row {
+    color: green;
+    text-align: center;
+    font-family: "archia";
+    font-size: 18px!important;
+    font-weight: 600;
+    width: 20%;
+}
+.death_row {
+    color: cornflowerblue;
+    text-align: center;
+    font-family: "archia";
+    font-size: 18px!important;
+    font-weight: 600;
+    width: 20%;
+}
+.state_row {
+    color: black;
+    text-align: center;
+    font-family: "DM Sans,sans-serif";
+    font-weight: 500;
+    width: 20%;
+}
+
+.total_head {
+    color: red;
+    text-align: center;
+    font-family: "archia";
+    font-size: 18px!important;
+    font-weight: 500;
+    width: 20%;
+}
+
+.active_head {
+    color: blue;
+    text-align: center;
+    font-family: "archia";
+    font-size: 18px!important;
+    font-weight: 500;
+    width: 20%;
+}
+.recover_head {
+    color: green;
+    text-align: center;
+    font-family: "archia";
+    font-size: 18px!important;
+    font-weight: 500;
+    width: 20%;
+}
+.death_head {
+    color: cornflowerblue;
+    text-align: center;
+    font-family: "archia";
+    font-size: 18px!important;
+    font-weight: 500;
+    width: 20%;
+}
+.state_head {
+    color: black;
+    text-align: center;
+    font-family: "DM Sans,sans-serif";
+    font-weight: 500;
+    width: 20%;
+}
+
+.alert_box {
+    text-align: center;
+    font-family: "DM Sans,sans-serif"; 
+}
+
+.row_all {
+    padding: 0.50rem;
+    vertical-align: top;
+}
+.row_all:hover {
+    cursor: pointer;
+}
+#rows tr:nth-child(even){background-color: #f2f2f2;}
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+  }
+
+
+    #daily {
+        
+        min-width: 310px; 
+        max-width: 800px; 
+        margin: 0 auto; 
+    }
+
+    #total {
+        
+        min-width: 310px; 
+        max-width: 800px; 
+        margin: 0 auto; 
+    }
+
+    #container {
+        height: 500px; 
+        min-width: 310px; 
+        max-width: 800px; 
+        margin: 0 auto; 
+    }
+    .loading {
+        margin-top: 10em;
+        text-align: center;
+        color: gray;
+    }
+    
